@@ -1,10 +1,14 @@
 const colors = require('tailwindcss/colors')
+const palette = require('./palette')
 
 module.exports = {
   purge: [],
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      colors: palette
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -234,6 +238,12 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
+      regular: [
+        'RobotoRegular',
+        'RobotoMedium',
+        'RobotoBold',
+        'RobotoBlack'
+      ],
       sans: [
         'ui-sans-serif',
         'system-ui',

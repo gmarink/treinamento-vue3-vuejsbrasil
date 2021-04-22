@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
- 
 
 const Home = () => import('../views/Home/index.vue')
 const Feedbacks = () => import('../views/Feedbacks/index.vue')
@@ -27,11 +26,10 @@ const routes = [
       hasAuth: true
     }
   },
-  
-  
+
   {
     path: '/:pathMatch(.*)*',
-    redirect: {name: 'Home'}
+    redirect: { name: 'Home' }
   }
 ]
 
